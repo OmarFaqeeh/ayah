@@ -7,31 +7,34 @@ export function IslamicBackground() {
 
     useEffect(() => {
         // Generate random floating stars
-        const generatedStars = Array.from({ length: 15 }, (_, i) => ({
+        const generatedStars = Array.from({ length: 30 }, (_, i) => ({
             id: i,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            delay: Math.random() * 6,
-            duration: 4 + Math.random() * 4
+            delay: Math.random() * 10,
+            duration: 5 + Math.random() * 8,
+            symbol: Math.random() > 0.7 ? '✦' : Math.random() > 0.5 ? '✧' : '✷',
+            size: 10 + Math.random() * 20
         }));
-        setStars(generatedStars);
+        setStars(generatedStars as any);
     }, []);
 
     return (
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
             {/* Floating Stars/Ornaments */}
-            {stars.map((star) => (
+            {stars.map((star: any) => (
                 <div
                     key={star.id}
-                    className="absolute text-primary/20 text-2xl floating-ornament"
+                    className="absolute text-primary/15 floating-ornament"
                     style={{
                         left: star.left,
                         top: star.top,
+                        fontSize: `${star.size}px`,
                         animationDelay: `${star.delay}s`,
                         animationDuration: `${star.duration}s`
                     }}
                 >
-                    ✦
+                    {star.symbol}
                 </div>
             ))}
 

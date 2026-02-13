@@ -31,7 +31,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
     const audioSurah = data.data[2];
 
     return (
-        <div className="container py-8">
+        <div className="container mx-auto py-8">
             <SurahView surah={arabicSurah} englishSurah={englishSurah} audioSurah={audioSurah} />
         </div>
     );
