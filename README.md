@@ -1,44 +1,52 @@
-# 🌿 ربيع القلب - Rabie Al-Qalb
+🌿 Spring of the Heart - Rabie Al-Qalb
 
-تطبيق إسلامي متكامل وعصري يهدف إلى تقريب المسلم من القرآن الكريم وعباداته اليومية بتجربة مستخدم فريدة وتقنيات حديثة.
-
----
-
-## ✨ المميزات الرئيسية (Core Features)
-
-* **📖 المصحف الإلكتروني:** تصميم عصري وجذاب مع ضمان دقة الآيات بنسبة 100% من مصادر موثوقة.
-* **🎧 مشغل صوتي متطور:** * الاستماع لأشهر **10 قراء** في العالم الإسلامي.
-    * خاصية تحديد آية معينة أو نطاق من الآيات (من آية إلى آية).
-    * التحكم في **سرعة القراءة** وتكرار الآيات للحفظ والمراجعة.
-* **🕌 أوقات الصلاة:** عرض دقيق لمواقيت الصلاة في جميع دول العالم مع اختيار المحافظة والمدينة.
-* **🌍 تعدد اللغات:** دعم أكثر من **10 لغات** عالمية مع دعم كامل للواجهات من اليمين لليسار (RTL).
-* **🌓 نظام السمات (Themes):** دعم الوضع الداكن (Dark)، الفاتح (Light)، أو التبديل التلقائي حسب إعدادات النظام.
-* **🔐 نظام الحسابات:** تسجيل دخول وإنشاء حساب لحفظ التفضيلات والمتابعة.
+A comprehensive and modern Islamic application that aims to bring Muslims closer to the Holy Quran and their daily worship through a unique user experience and cutting-edge technology.
 
 ---
 
-## 🚀 التقنيات المستخدمة (Tech Stack)
+## ✨ Core Features
+
+* **📖 Electronic Quran:** Modern and attractive design with 100% accuracy of verses guaranteed from reliable sources.
+
+* **🎧 Advanced Audio Player:** * Listen to the 10 most famous reciters in the Islamic world.
+
+* Select a specific verse or a range of verses (verse by verse).
+
+* Control over reading speed and verse repetition for memorization and review.
+
+* **🕌 Prayer Times:** Accurate display of prayer times for all countries worldwide, with the option to select your province and city.
+
+* **🌍 Multilingual:** Support for more than 10 international languages ​​with full right-to-left (RTL) interface support.
+
+ * **🌓 Themes System:** Supports Dark Mode, Light Mode, or automatic switching based on system settings.
+
+* **🔐 Account System:** Log in and create an account to save your preferences and follow your progress.
+
+
+ ---
+
+## 🚀 Technologies Used (Tech Stack)
 
 ### Frontend
 - **Next.js 14+** (App Router)
-- **Tailwind CSS** (للتصميم العصري والمتجاوب)
-- **Next-intl** (لإدارة اللغات المتعددة)
-- **Lucide React** (للأيقونات)
+- **Tailwind CSS** (For modern and responsive design)
+- **Next-intl** (For multi-language management)
+- **Lucide React** (For icons)
 
 ### Backend
 - **Express.js** (Node.js Framework)
-- **SQL (PostgreSQL/MySQL)** (قاعدة البيانات)
-- **JWT** (لتأمين عملية تسجيل الدخول)
+- **SQL (PostgreSQL/MySQL)** (Database)
+- **JWT** (For secure login)
 
 ---
 
-## 🛠️ التنصيب والتشغيل (Setup)
+## 🛠️ Installation and Setup
 
-### 1. المتطلبات (Prerequisites)
-- Node.js (الإصدار الأخير المستقر)
-- قاعدة بيانات SQL جاهزة.
+### 1. Prerequisites
+- Node.js (latest stable version)
+- SQL database ready.
 
-### 2. تنصيب الواجهة الأمامية (Frontend)
+ 2. Installing the Frontend:
 ```bash
 cd client
 npm install
