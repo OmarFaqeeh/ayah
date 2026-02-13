@@ -153,7 +153,7 @@ export function SurahView({ surah, englishSurah, audioSurah }: SurahViewProps) {
                             )}
 
                             {/* Quranic Text */}
-                            <div className="flex-1 text-center font-amiri text-3xl md:text-[2.75rem] leading-[2.8] md:leading-[3.2] z-10 relative px-4 text-foreground/90">
+                            <div className="flex-1 text-center font-amiri text-2xl md:text-3xl leading-[2.8] md:leading-[3.2] z-10 relative px-4 text-foreground/90">
                                 {currentPageAyahs.map((ayah) => {
                                     const isCurrentlyPlaying = currentTrack?.surahNumber === surah.number &&
                                         currentTrack?.ayahNumber === ayah.numberInSurah &&

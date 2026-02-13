@@ -16,6 +16,9 @@ type PrayerTimings = {
 };
 
 const CITIES = [
+    { name: "Amman", country: "Jordan" },
+    { name: "Jerash", country: "Jordan" },
+    { name: "Zarqa", country: "Jordan" },
     { name: "Mecca", country: "Saudi Arabia" },
     { name: "Medina", country: "Saudi Arabia" },
     { name: "Riyadh", country: "Saudi Arabia" },
@@ -211,8 +214,8 @@ export function PrayerTimesWidget() {
                                     <div className={`absolute -inset-0.5 rounded-md blur opacity-0 group-hover:opacity-100 transition duration-300 ${isNext ? 'bg-gradient-to-r from-primary/40 to-primary/20 opacity-75' : 'bg-gradient-to-r from-primary/20 to-primary/10'
                                         }`}></div>
                                     <div className={`relative flex flex-col items-center justify-center p-4 rounded-md border-2 transition-all ${isNext
-                                            ? 'bg-gradient-to-br from-primary/20 to-primary/10 border-primary/50 shadow-lg'
-                                            : 'bg-gradient-to-br from-secondary/50 to-secondary/30 border-primary/20 hover:border-primary/40'
+                                        ? 'bg-gradient-to-br from-primary/20 to-primary/10 border-primary/50 shadow-lg'
+                                        : 'bg-gradient-to-br from-secondary/50 to-secondary/30 border-primary/20 hover:border-primary/40'
                                         }`}>
                                         <span className={`text-sm font-medium font-amiri ${isNext ? 'text-primary font-bold' : 'text-muted-foreground'}`}>
                                             {t(prayer.toLowerCase())}
