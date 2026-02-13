@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Islamic Light Theme (Emerald & Gold) */
+  --background: #f8fafc;
+  /* Slate 50 */
+  --foreground: #022c22;
+  /* Emerald 950 */
+  --card: #ffffff;
+  --card-foreground: #022c22;
+  --popover: #ffffff;
+  --popover-foreground: #022c22;
+  --primary: #047857;
+  /* Emerald 700 */
+  --primary-foreground: #ffffff;
+  --secondary: #fef3c7;
+  /* Amber 100 (Gold-ish) */
+  --secondary-foreground: #78350f;
+  /* Amber 900 */
+  --muted: #f1f5f9;
+  /* Slate 100 */
+  --muted-foreground: #64748b;
+  /* Slate 500 */
+  --accent: #dcfce7;
+  /* Emerald 100 */
+  --accent-foreground: #064e3b;
+  /* Emerald 900 */
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #059669;
+  /* Emerald 600 */
+  --radius: 0.5rem;
+
+  --font-amiri: 'Amiri', serif;
+}
+
+.dark {
+  /* Islamic Dark Theme (Deep Emerald & Gold) */
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #f0f9ff;
+  --card: #0f172a;
+  /* Slate 900 */
+  --card-foreground: #f0f9ff;
+  --popover: #0f172a;
+  --popover-foreground: #f0f9ff;
+  --primary: #10b981;
+  /* Emerald 500 */
+  --primary-foreground: #022c22;
+  --secondary: #3e240b;
+  /* Dark Amber */
+  --secondary-foreground: #fcd34d;
+  /* Amber 300 */
+  --muted: #1e293b;
+  /* Slate 800 */
+  --muted-foreground: #94a3b8;
+  /* Slate 400 */
+  --accent: #064e3b;
+  /* Emerald 900 */
+  --accent-foreground: #d1fae5;
+  /* Emerald 100 */
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #34d399;
+  /* Emerald 400 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-amiri: var(--font-amiri);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  direction: ltr;
+  background-image: radial-gradient(circle at center, transparent 0%, var(--background) 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Islamic Decorative Elements */
+.islamic-border {
+  border-image: repeating-linear-gradient(45deg,
+      hsl(var(--primary)),
+      hsl(var(--primary)) 10px,
+      transparent 10px,
+      transparent 20px) 1;
+}
+
+.islamic-ornament {
+  position: relative;
+}
+
+.islamic-ornament::before,
+.islamic-ornament::after {
+  content: '✦';
+  position: absolute;
+  color: hsl(var(--primary) / 0.3);
+  font-size: 1.5rem;
+}
+
+.islamic-ornament::before {
+  left: -2rem;
+}
+
+.islamic-ornament::after {
+  right: -2rem;
+}
+
+.geometric-pattern {
+  background-image:
+    linear-gradient(30deg, hsl(var(--primary) / 0.05) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.05) 87.5%, hsl(var(--primary) / 0.05)),
+    linear-gradient(150deg, hsl(var(--primary) / 0.05) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.05) 87.5%, hsl(var(--primary) / 0.05)),
+    linear-gradient(30deg, hsl(var(--primary) / 0.05) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.05) 87.5%, hsl(var(--primary) / 0.05)),
+    linear-gradient(150deg, hsl(var(--primary) / 0.05) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.05) 87.5%, hsl(var(--primary) / 0.05));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+}
+
+.decorative-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.decorative-divider::before,
+.decorative-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid hsl(var(--primary) / 0.3);
+  background: linear-gradient(to right, transparent, hsl(var(--primary) / 0.2), transparent);
+  height: 2px;
 }

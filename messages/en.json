@@ -1,0 +1,61 @@
+{
+    "HomePage": {
+        "title": "Rabie Al-Qalb",
+        "welcome": "Welcome to Rabie Al-Qalb"
+    },
+    "Navigation": {
+        "home": "Home",
+        "quran": "Quran",
+        "prayerTimes": "Prayer Times"
+    },
+    "PrayerTimes": {
+        "title": "Prayer Times",
+        "next": "Next Prayer",
+        "loading": "Loading prayer times...",
+        "error": "Failed to load prayer times",
+        "fajr": "Fajr",
+        "dhuhr": "Dhuhr",
+        "asr": "Asr",
+        "maghrib": "Maghrib",
+        "isha": "Isha",
+        "sunrise": "Sunrise"
+    },
+    "Quran": {
+        "title": "The Holy Quran",
+        "surah": "Surah",
+        "ayahs": "Ayahs",
+        "revelation": "Revelation",
+        "meccan": "Meccan",
+        "medinan": "Medinan",
+        "read": "Read",
+        "search": "Search Surah...",
+        "playFullSurah": "Play Full Surah",
+        "pauseRecitation": "Pause Recitation",
+        "previous": "Previous",
+        "next": "Next",
+        "useArrowKeys": "Use arrow keys ← → to navigate pages"
+    },
+    "Login": {
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Sign In",
+        "logout": "Sign Out",
+        "welcome": "Welcome back"
+    },
+    "Settings": {
+        "title": "Settings",
+        "theme": "Theme",
+        "language": "Language"
+    },
+    "Footer": {
+        "copyright": "All rights reserved"
+    },
+    "Ramadan": {
+        "title": "Ramadan",
+        "countdown": "Ramadan Countdown",
+        "daysRemaining": "days remaining",
+        "mubarak": "Ramadan Mubarak",
+        "blessing": "May this blessed month bring peace and prosperity"
+    }
+}
